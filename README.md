@@ -2,15 +2,15 @@
 
 ## Plan
 
- * Links:
+ * Links (1. will be built first, 2. sometime in future):
    1. 10Gbit fiber between main building and sauna
    2. 10Gbit fiber between main building and guest house
 
-* Main building with ethernet cabling:
-   * Needs 2x SFP+ for fibers
+ * Main building with ethernet cabling:
+   * Needs 2x SFP+ ports for fibers
    * 12 + 1 + 1 (-> 24 ports) of copper ethernet to connect rooms, etc.
 
-* Sauna and guest house:
+ * Sauna and guest house:
    * 1x SFP+ port + copper to connect WLAN AP
 
 ## Costs
@@ -18,9 +18,9 @@
  * Switches
    * [Mikrotik CRS210-8G-2S+IN (8x copper gigE + 2x SFP+)](http://routerboard.com/CRS210-8G-2SplusIN)
    * [Mikrotik CRS226-24G-2S+RM (24x copper gigE + 2x SFP+)](http://routerboard.com/CRS226-24G-2SplusRM)
-   * Approx 515 € (not yet ordered)
+   * ~515 €
 
-* SFP+ tranceivers
+ * SFP+ tranceivers
    * [Fiberstore Generic Compatible 10GBASE-SR SFP+ 850nm 300m DOM Transceiver](http://www.fs.com/products/11589.html)
    * 21.50 € / tranceiver after shipping costs and VAT (24%)
 
