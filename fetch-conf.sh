@@ -12,6 +12,6 @@ CONF="${NAME}-$(date +%FT%T)"
 
 set -ex
 
-ssh ${SWITCH} system export verbose file=${CONF}-verbose
-ssh ${SWITCH} system export file=${CONF}-compact
+ssh ${SWITCH} export verbose file=${CONF}-verbose
+ssh ${SWITCH} export file=${CONF}-compact
 echo "get ${CONF}-verbose.rsc\nget ${CONF}-compact.rsc\n" | sftp -b - ${SWITCH}
