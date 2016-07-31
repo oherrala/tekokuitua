@@ -1,17 +1,13 @@
 #!/bin/sh
 set -e
 
-if [ -z $1 ] || [ -z $2 ]; then
-    echo "$0 <user>@<host> <switch name>"
+if [ -z $1 ]; then
+    echo "$0 <user>@<host>"
     exit 1
 fi
 
-SWITCH="$1"
-NAME="$2"
-CONF="${NAME}-$(date +%FT%T)"
-
 set -ex
+SWITCH="$1"
 
-ssh ${SWITCH} export verbose file=${CONF}-verbose
-ssh ${SWITCH} export file=${CONF}-compact
-echo "get ${CONF}-verbose.rsc\nget ${CONF}-compact.rsc\n" | sftp -b - ${SWITCH}
+ssh ${SWITCH} 'export verbose hide-sensitive file="$[system identity get name]"'
+echo 'get *.rsc\n' | sftp -b - ${SWITCH}
